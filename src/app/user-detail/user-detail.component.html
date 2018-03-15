@@ -1,0 +1,10 @@
+<div *mobxAutorun>
+  <p>Usercount: {{viewStore.userCount}}</p>
+  <button (click)="goBack()">Back to users</button>
+  <p *ngIf="viewStore.selectedUser">
+    {{viewStore.selectedUser.name}}
+  </p>
+  <p *ngIf="viewStore.fetchingData">
+      loading user data
+  </p>
+</div>

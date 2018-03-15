@@ -1,0 +1,11 @@
+<div *mobxAutorun>
+  <p>Usercount: {{viewStore.userCount}}</p>
+  <p>Text value from viewStore: {{viewStore.text}}</p>
+  <p>Loading data: {{viewStore.fetchingData}}</p>
+  <p>Users list goes here.</p>
+  <ul>
+    <li *ngFor="let user of viewStore.users">
+        <a routerLink="/detail/{{user.id}}" (click)="viewStore.setUser(user)">{{user.name}}</a>
+    </li>
+  </ul>
+</div>
