@@ -64,4 +64,10 @@ export class ViewStore {
     unselectUser() {
         this.selectedUser = null;
     }
+
+    @action('Remove user')
+    removeUser(user) {
+        console.log(user.name);
+        this.users = this.users.filter(u => u !== user);
+    }
 }

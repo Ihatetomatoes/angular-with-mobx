@@ -6,6 +6,7 @@
   <ul>
     <li *ngFor="let user of viewStore.users">
         <a routerLink="/detail/{{user.id}}" (click)="viewStore.setUser(user)">{{user.name}}</a>
+        <button (click)="viewStore.removeUser(user)">X</button>
     </li>
   </ul>
 </div>
